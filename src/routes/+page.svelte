@@ -1,51 +1,34 @@
 <script>
-  function click() {
-    alert("404");
-  }
+
 </script>
 
 <main>
-  <div class="clickMe"></div>
-  <button class="juli" on:click={click}>click</button>
-
-  <div class="test">test test</div>
-
-  <div class="moin">example</div>
-  <div>baum</div>
+  <div class="header">
+    <div class="logo"><img src="/Ingenious.png" alt="Ingenious-Logo" /></div>
+  </div>
 </main>
 
 <style>
   main {
-    background: #ffffff;
+    background: #EFE9E0;
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0.4%;
-    box-sizing: border-box;
+    /* align-items: center; */
+    /* justify-content: space-around; */
   }
 
-  .hallo {
-    height: 20%;
-    width: 50%;
-    background-color: aqua;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-  }
-
-  .moin {
-    background-color: #de1717;
-    justify-content: center;
-    align-items: center;
-    height: 30%;
-    width: 20%;
-    display: flex;
-  }
-
-  .juli {
+  .header {
+    background-color:#0F9E99;
+    width: 100%;
     height: 10%;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
+  }
+
+  .logo{
+    width: 10%;
+    justify-content: left;
+    align-items: center;
   }
 </style>
