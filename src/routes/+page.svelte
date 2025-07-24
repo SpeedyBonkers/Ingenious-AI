@@ -1,11 +1,17 @@
 <script>
-  // Optional: Add logic here if needed
+  function handlepage() {
+    window.location.href = "/Record";
+  }
 </script>
 
 <div class="header">
   <div class="left">
     <div class="menu-icon">☰</div>
-    <div class="logo">MyLogo</div>
+    <div class="logo">
+      <main>
+        <img src="/Ingenious.png" alt="Ingenious AI" />
+      </main>
+    </div>
   </div>
   <div class="right">
     <button class="login">Login</button>
@@ -15,30 +21,40 @@
 </div>
 
 <main class="main">
-  <div class="hero-text">We listen. For You. <br> Ingenious AI</div>
-  <button class="record-btn">🎤 Record</button>
+  <div class="hero-text">We listen. For You. <br /> Ingenious AI</div>
+  <button class="record-btn" on:click={handlepage}>🎤 Record</button>
   <div class="upload-box">
     <div class="icon">⬆️</div>
     Drag & Drop to upload
   </div>
-  
 </main>
 
 <style>
   :global(body) {
-    background: #efe9e0;
+    background-color: #efe9e0;
     font-family: "Inter", Arial, sans-serif;
     margin: 0;
     overflow-y: auto;
   }
 
+  .main {
+    background-color: #efe9e0;
+    max-width: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+  }
+
   .header {
-    background: #0F9e99;
+    background: #0f9e99;
     height: 60px;
     display: flex;
     align-items: center;
     padding: 0 24px;
-    border-bottom: 2px solid #d2d2c7;
+    border-bottom: 2px solid #efe9e0;
     justify-content: space-between;
   }
 
@@ -60,10 +76,7 @@
   }
 
   .logo {
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 1.2rem;
-    margin-left: 8px;
+    width: 50%;
   }
 
   .header .right {
@@ -101,15 +114,6 @@
     align-items: center;
     justify-content: center;
     background: #fff;
-  }
-
-  .main {
-    max-width: 900px;
-    margin: 40px auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
   }
 
   .hero-text {
