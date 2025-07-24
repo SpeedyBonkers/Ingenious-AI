@@ -21,17 +21,19 @@
     <div class="icon">⬆️</div>
     Drag & Drop to upload
   </div>
+  
 </main>
 
 <style>
   :global(body) {
-    background: #f7efde;
+    background: #efe9e0;
     font-family: "Inter", Arial, sans-serif;
     margin: 0;
+    overflow-y: auto;
   }
 
   .header {
-    background: #7cc3b3;
+    background: #0F9e99;
     height: 60px;
     display: flex;
     align-items: center;
@@ -107,6 +109,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
   }
 
   .hero-text {
@@ -122,14 +125,14 @@
   }
 
   .record-btn {
-    background: #7cc3b3;
+    background: #0f9e99;
     color: #fff;
     border: 2px solid #222;
     border-radius: 30px;
     padding: 12px 34px;
     font-size: 1.1rem;
     font-weight: 500;
-    box-shadow: 2px 2px 4px #c6c6ba;
+    box-shadow: 2px 2px 4px #efe9e0;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -139,13 +142,13 @@
   }
 
   .record-btn:hover {
-    background: #6ab2a1;
+    background: #0f9e99;
   }
 
   .upload-box {
     width: 500px;
     height: 220px;
-    background: #f7efde;
+    background: #d0d0d0;
     border: 2px solid #888;
     border-radius: 24px;
     display: flex;
