@@ -5,6 +5,7 @@
 </script>
 
 <div class="header">
+ 
   <div class="left">
     <div class="menu-icon">☰</div>
     <div class="logo">
@@ -13,11 +14,13 @@
       </main>
     </div>
   </div>
+  
   <div class="right">
     <button class="login">Login</button>
     <button class="signup">Sign Up</button>
     <div class="user-icon">👤</div>
   </div>
+  
 </div>
 
 <main class="main">
@@ -32,7 +35,7 @@
 <style>
   :global(body) {
     background-color: #efe9e0;
-    font-family: "Inter", Arial, sans-serif;
+    font-family: "Numans", Arial, sans-serif;
     margin: 0;
     overflow-y: auto;
   }
@@ -40,27 +43,28 @@
   .main {
     background-color: #efe9e0;
     max-width: auto;
+    height: auto;
     padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .header {
     background: #0f9e99;
-    height: 60px;
+    min-height: 60px;
     display: flex;
     align-items: center;
-    padding: 0 24px;
+    padding: 0px 24px;
     border-bottom: 2px solid #efe9e0;
     justify-content: space-between;
   }
 
   .header .left {
     display: flex;
-    align-items: center;
+    align-items: left;
   }
 
   .menu-icon {
@@ -70,19 +74,23 @@
     border-radius: 6px;
     background: none;
     margin-right: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
 
   .logo {
-    width: 50%;
+    width: 30%;
+    cursor: pointer;
   }
 
   .header .right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
   }
 
   .header .login {
@@ -136,17 +144,17 @@
     padding: 12px 34px;
     font-size: 1.1rem;
     font-weight: 500;
-    box-shadow: 2px 2px 4px #efe9e0;
+    box-shadow: 2px 2px 4px #4f4f4f;
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
     margin-bottom: 36px;
-    transition: background 0.2s;
+    transition: background 0.3s;
   }
 
   .record-btn:hover {
-    background: #0f9e99;
+    background: #0a6865;
   }
 
   .upload-box {
@@ -159,7 +167,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #888;
+    color: #414141;
     font-size: 1.1rem;
     margin-top: 12px;
     box-sizing: border-box;
