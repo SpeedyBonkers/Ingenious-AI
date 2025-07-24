@@ -167,14 +167,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #414141;
-    font-size: 1.1rem;
+    color: #000000;
+    font-size: 1.5rem;
     margin-top: 12px;
     box-sizing: border-box;
   }
 
   .upload-box .icon {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     margin-bottom: 12px;
   }
 </style>
