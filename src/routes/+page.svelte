@@ -1,9 +1,13 @@
 <script>
-  function handlepage() {
+  
+  function handlepage1() {
+    window.location.href = "/Login"
+  }
+  
+  function handlepage2() {
     window.location.href = "/Record";
   }
-      // Initialisiere SpeechRecognition, wenn Komponente geladen wird
-      let recognition;
+  let recognition;
 let listening = false;
 let transcript = '';
 let pauseTimeout;
@@ -24,7 +28,7 @@ if (typeof window !== 'undefined') {
       pauseTimeout = setTimeout(() => {
         recognition.stop();
         listening = false;
-      }, 5000); // 2 seconds pause
+      }, 2000); // 2 seconds pause
     };
 
     recognition.onerror = (event) => {
@@ -49,6 +53,7 @@ function startRecognition() {
     transcript = 'Web Speech API wird von diesem Browser nicht unterstützt.';
   }
 }
+
 </script>
 
 <div class="header">
@@ -63,7 +68,7 @@ function startRecognition() {
   </div>
   
   <div class="right">
-    <button class="login">Login</button>
+    <button class="login" on:click={handlepage1}>Login</button>
     <button class="signup">Sign Up</button>
     <div class="user-icon" >👤</div>
   </div>
@@ -138,6 +143,8 @@ function startRecognition() {
   .logo {
     width: 30%;
     cursor: pointer;
+    justify-content: bottom;
+    align-items: bottom;
   }
 
   .header .right {
@@ -155,11 +162,13 @@ function startRecognition() {
     cursor: pointer;
   }
 
-  .header .signup {
+  .signup {
     background: #fff;
     border: 2px solid #222;
+    height: 35px;
+    width: 100px;
     border-radius: 8px;
-    padding: 7px 20px;
+    padding: 5px 16px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
