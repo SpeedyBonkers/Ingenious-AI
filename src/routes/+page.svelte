@@ -9,7 +9,7 @@ function handlepage2() {
 }
 
   function handlepage3() {
-    window.location.href = "/Record";
+    window.location.href = "/Record"
   }
   let recognition;
 let listening = false;
@@ -60,7 +60,8 @@ function startRecognition() {
 
 </script>
 
-<div class="header">
+<main>
+  <div class="header">
  
   <div class="left">
     <div class="menu-icon">☰</div>
@@ -87,11 +88,12 @@ function startRecognition() {
      <div class="hero-text"> We listen. For You. <br /> Ingenious AI</div>
     {/if}
 
-  <button class="record-btn"  on:click={startRecognition} disabled={listening}>🎤 Record</button>
+  <button class="record-btn"  on:click= {startRecognition} disabled={listening}>🎤 Record</button>
   <div class="upload-box">
     <div class="icon">⬆️</div>
     Drag & Drop to upload
   </div>
+</main>
 </main>
 
 <style>

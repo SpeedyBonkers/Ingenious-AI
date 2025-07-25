@@ -63,7 +63,7 @@
 		display: flex;
 		align-items: bottom;
 		justify-content: bottom;
-		width: 30%;
+		width: 20%;
 	}
 
 	.menu-icon {
@@ -88,7 +88,7 @@
 	}
 	.Login {
 		font-size: 0.95rem;
-		color: #222;
+		color: #000000;
 		text-decoration: none;
 		padding: 0 6px;
 	}
