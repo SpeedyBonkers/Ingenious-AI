@@ -91,6 +91,8 @@
   .logo {
     width: 30%;
     cursor: pointer;
+    justify-content: bottom;
+    align-items: bottom;
   }
 
   .header .right {
@@ -114,7 +116,7 @@
     height: 35px;
     width: 100px;
     border-radius: 8px;
-    padding: 7px 20px;
+    padding: 5px 16px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;

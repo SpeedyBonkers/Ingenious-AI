@@ -7,18 +7,18 @@
 	<div class="header">
 		<div class="logo-area">
 			<span class="menu-icon">&#9776;</span>
-			<span class="logo">SOMEHUB</span>
+			<img src="/Ingenious.png" alt="Ingenious AI" />
 		</div>
 		<div class="header-actions">
-			<a class="header-link" href="">Log in</a>
-			<button class="header-btn">Sign up</button>
+			<div class="Login">Log in</div>
+			<button class="Signup">Sign up</button>
 			<div class="header-avatar">👤</div>
 		</div>
 	</div>
 
 	<div class="main">
 		<div class="login-container">
-			<div class="login-title">Login</div>
+			<div class="login-title">Log in</div>
 			<div class="underline"></div>
 			<form>
 				<input type="email" placeholder="Email" bind:value={email} />
@@ -62,39 +62,46 @@
 	.logo-area {
 		display: flex;
 		align-items: center;
-		gap: 8px;
+		gap: 0px;
 	}
+
 	.menu-icon {
-		font-size: 1.5rem;
-		margin-right: 16px;
-		cursor: pointer;
+	min-width: 36px;
+    height: 36px;
+    border: 2px solid #222;
+    border-radius: 8px;
+    background: none;
+    margin-right: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 	}
-	.brand {
-		font-weight: bold;
-		font-size: 1.1rem;
-		letter-spacing: 1px;
-	}
+
 	.header-actions {
 		display: flex;
 		align-items: center;
 		gap: 18px;
 	}
-	.header-link {
+	.Login {
 		font-size: 0.95rem;
 		color: #222;
 		text-decoration: none;
 		padding: 0 6px;
 	}
-	.header-btn {
+	.Signup {
 		background: #fff;
 		color: #222;
 		border: 2px solid #222;
 		border-radius: 8px;
 		padding: 5px 16px;
-		font-weight: 500;
+		font-weight: bold;
 		cursor: pointer;
 		font-size: 1rem;
 		box-shadow: 0 1px 2px #0001;
+		min-width: 100px;
 	}
 	.header-avatar {
 		background: #fff;
