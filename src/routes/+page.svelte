@@ -4,7 +4,11 @@
     window.location.href = "/Login"
   }
   
-  function handlepage2() {
+function handlepage2() {
+  window.location.href = "/Signup"
+}
+
+  function handlepage3() {
     window.location.href = "/Record";
   }
 
@@ -23,7 +27,7 @@
   
   <div class="right">
     <button class="login" on:click={handlepage1}>Login</button>
-    <button class="signup">Sign Up</button>
+    <button class="signup" on:click={handlepage2}>Sign Up</button>
     <div class="user-icon">👤</div>
   </div>
   
@@ -31,7 +35,7 @@
 
 <main class="main">
   <div class="hero-text">We listen. For You. <br /> Ingenious AI</div>
-  <button class="record-btn" on:click={handlepage2}>🎤 Record</button>
+  <button class="record-btn" on:click={handlepage3}>🎤 Record</button>
   <div class="upload-box">
     <div class="icon">⬆️</div>
     Drag & Drop to upload
@@ -91,8 +95,6 @@
   .logo {
     width: 30%;
     cursor: pointer;
-    justify-content: bottom;
-    align-items: bottom;
   }
 
   .header .right {

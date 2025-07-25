@@ -61,8 +61,9 @@
 	}
 	.logo-area {
 		display: flex;
-		align-items: center;
-		gap: 0px;
+		align-items: bottom;
+		justify-content: bottom;
+		width: 30%;
 	}
 
 	.menu-icon {
