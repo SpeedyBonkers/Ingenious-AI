@@ -11,6 +11,52 @@ function handlepage2() {
   function handlepage3() {
     window.location.href = "/Record";
   }
+  let recognition;
+let listening = false;
+let transcript = '';
+let pauseTimeout;
+
+if (typeof window !== 'undefined') {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (SpeechRecognition) {
+    recognition = new SpeechRecognition();
+    recognition.lang = 'de-DE';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.continuous = true;
+
+    recognition.onresult = (event) => {
+      transcript = event.results[event.results.length - 1][0].transcript;
+      // Reset pause timer on every result
+      clearTimeout(pauseTimeout);
+      pauseTimeout = setTimeout(() => {
+        recognition.stop();
+        listening = false;
+      }, 2000); // 2 seconds pause
+    };
+
+    recognition.onerror = (event) => {
+      transcript = 'Fehler: ' + event.error;
+      listening = false;
+      clearTimeout(pauseTimeout);
+    };
+
+    recognition.onend = () => {
+      listening = false;
+      clearTimeout(pauseTimeout);
+    };
+  }
+}
+
+function startRecognition() {
+  if (recognition) {
+    transcript = '';
+    listening = true;
+    recognition.start();
+  } else {
+    transcript = 'Web Speech API wird von diesem Browser nicht unterstützt.';
+  }
+}
 
 </script>
 
@@ -34,8 +80,14 @@ function handlepage2() {
 </div>
 
 <main class="main">
-  <div class="hero-text">We listen. For You. <br /> Ingenious AI</div>
-  <button class="record-btn" on:click={handlepage3}>🎤 Record</button>
+
+    {#if transcript != ""}
+    <div class="hero-text">  {transcript} </div>
+    {:else}
+     <div class="hero-text"> We listen. For You. <br /> Ingenious AI</div>
+    {/if}
+
+  <button class="record-btn"  on:click={startRecognition} disabled={listening}>🎤 Record</button>
   <div class="upload-box">
     <div class="icon">⬆️</div>
     Drag & Drop to upload
